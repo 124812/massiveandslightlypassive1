@@ -26,8 +26,17 @@
       "2026-08-31"
     ]
   },
+  "sizing": {
+    "W_TICKER": 0.04,
+    "GROSS_CAP": 0.5,
+    "BETA_CAP": 0.25,
+    "VOL_TARGET": 0.08,
+    "VOL_LOOKBACK": 60,
+    "MAX_LOSS_BUDGET": 0.005,
+    "VOL_REF": 0.07718
+  },
   "chosen_filter": "none",
   "chosen_policy": "none",
-  "n_hypotheses_examined_on_train": 3840,
-  "t_stat_that_must_be_cleared": 4.36
+  "n_hypotheses_examined_on_train": 15360,
+  "t_stat_that_must_be_cleared": 4.654
 }
