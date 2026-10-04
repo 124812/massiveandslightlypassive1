@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GQHacks Retro Market Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    
+    <div class="container pixel-container">
+        <header>
+            <div class="badge">[ SYSTEM.ONLINE ]</div>
+            <h1>MARKET_<span>INSIGHTS.exe</span></h1>
+            <p class="subtitle">>>> AWAITING COMMAND: ACCESS 8-K OPTIONS STRATEGY DATA...</p>
+        </header>
+
+        <main>
+            <div class="pixel-card">
+                <div class="card-header">
+                    <h2>// LATEST.REPORT</h2>
+                    <span class="status-indicator live">LIVE_FEED</span>
+                </div>
+                <div class="card-body">
+                    <p class="instruction-text">Select an operation below to process the Jupyter Notebook results via audio transmission.</p>
+                    
+                    <div class="button-group">
+                        <button id="generateBtn" class="pixel-btn primary">
+                            > [ AI SUMMARY ] Generate & Listen
+                        </button>
+
+                        <button id="rawBtn" class="pixel-btn secondary">
+                            > [ RAW DATA ] Read Direct Results
+                        </button>
+                    </div>
+
+                    <div id="loadingState" class="hidden">
+                        <div class="retro-spinner">
+                            [ | ]
+                        </div>
+                        <p class="blink">PROCESSING_DATA...</p>
+                    </div>
+
+                    <div id="resultState" class="hidden">
+                        <div class="audio-visualizer">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        
+                        <div class="transcript-box">
+                            <h3>--- AUDIO_TRANSCRIPT ---</h3>
+                            <p id="transcriptText"></p>
+                        </div>
+                        
+                        <audio id="audioPlayer" controls></audio>
+                    </div>
+
+                    <div id="errorState" class="hidden">
+                        <p id="errorText" class="error-text">ERROR: FAILURE TO FETCH REPORT</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>POWERED_BY = { Massive_API, Gemini_AI, ElevenLabs }</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
