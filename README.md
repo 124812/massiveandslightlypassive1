@@ -29,6 +29,24 @@ Then:
    `API key loaded (ends xxxx)` when it finds your key. The first full run takes about 10 minutes;
    API responses are cached in `.massive_cache/`, so later runs take seconds.
 
+## Accessibility & Audio Briefing App
+
+This project includes a retro-styled web app powered by **Google Gemini** and **ElevenLabs** for text-to-speech accessibility briefings of your trading results.
+
+### How to Run:
+1. **Start Jupyter Lab first**: Make sure Jupyter is running locally on port 8888 (`.venv\Scripts\activate; jupyter lab` or `source .venv/bin/activate && jupyter lab`) and that `strategy_v2.ipynb` has been executed. The web app fetches execution outputs directly from the Jupyter REST API.
+2. **Verify API keys in `.env`**: Ensure your `.env` file in the root directory contains your keys:
+   ```env
+   MASSIVE_API_KEY=your_key_here
+   GEMINI_API_KEY=your_key_here
+   ELEVENLABS_API_KEY=your_key_here
+   ```
+3. **Launch the Accessibility Web Server**:
+   - **Windows**: Run `accessibility_app\run.bat` (or double-click it in File Explorer).
+   - **macOS / Linux**: Run `python3 -m http.server 8000` from the root folder and open `http://localhost:8000/accessibility_app/frontend/` in your browser.
+4. **Generate Briefing**: Click **Generate Audio Briefing** in the web interface to hear Gemini summarize your strategy's performance metrics and compare it with real-time SPY benchmark data using ElevenLabs audio synthesis.
+
+
 ## Manual setup
 
 ```bash

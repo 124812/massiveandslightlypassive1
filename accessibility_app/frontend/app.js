@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     let GEMINI_API_KEY = "";
     let ELEVENLABS_API_KEY = "";
+    let JUPYTER_TOKEN = "";
 
     try {
         const envRes = await fetch('/.env');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const trimmed = line.trim();
                 if (trimmed.startsWith('GEMINI_API_KEY=')) GEMINI_API_KEY = trimmed.split('=')[1].trim();
                 if (trimmed.startsWith('ELEVENLABS_API_KEY=')) ELEVENLABS_API_KEY = trimmed.split('=')[1].trim();
+                if (trimmed.startsWith('JUPYTER_TOKEN=')) JUPYTER_TOKEN = trimmed.split('=')[1].trim();
             });
         }
     } catch (e) {
@@ -36,7 +38,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     visualizer.classList.add('paused');
 
     const JUPYTER_BASE = "http://localhost:8888";
-    const JUPYTER_TOKEN = "8f03726689d7e7f26c3fd942444c91dd2cdb4b6bcba61e65";
 
     async function extractNotebookResults() {
         try {
