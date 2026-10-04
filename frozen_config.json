@@ -1,0 +1,33 @@
+{
+  "ENTRY_DELAY": 0,
+  "MAX_HOLD": 21,
+  "PROFIT_TAKE_FRAC": null,
+  "USE_STOP": false,
+  "CALL_MIN_DTE": 14,
+  "CALL_MAX_DTE": 63,
+  "MIN_PRICE": 5,
+  "MIN_ENTRY_VOLUME": 20,
+  "cost_model": {
+    "half_spread_frac_of_premium_at_30dte": 0.06,
+    "tick_floor_per_share": 0.05,
+    "stock_slippage_bps_by_cap_tier": "20 / 10 / 5"
+  },
+  "windows": {
+    "TRAIN": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "VALIDATE": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "TEST": [
+      "2026-01-01",
+      "2026-08-31"
+    ]
+  },
+  "chosen_filter": "none",
+  "chosen_policy": "none",
+  "n_hypotheses_examined_on_train": 3840,
+  "t_stat_that_must_be_cleared": 4.36
+}
